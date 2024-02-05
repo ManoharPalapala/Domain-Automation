@@ -15,7 +15,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ExcelUtils {
+public class MetaExcelUtils {
 
 //	public static void main(String[] args) {
 //		readMetaContentFromExcel("metaContent","Vocationize.com","about");
@@ -28,7 +28,7 @@ public class ExcelUtils {
 		
 		String metaValue=null;
 		
-		File excelFile = new File(System.getProperty("user.dir")+"\\src\\main\\java\\com\\test\\resources\\metaPractise.xlsx");
+		File excelFile = new File(Utils.readDataFromPropFile("metaContentSheetPath"));
 		
 		FileInputStream fis;
 		XSSFWorkbook wb=null;

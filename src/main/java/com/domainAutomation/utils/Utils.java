@@ -25,7 +25,7 @@ public class Utils {
 	
 	public static Object[][] readDataFromExcel(String sheetName) {
 		
-		File excelFile = new File(System.getProperty("user.dir"),Utils.readDataFromPropFile("path"));
+		File excelFile = new File(System.getProperty("user.dir"),Utils.readDataFromPropFile("domainUrlSheetPath"));
 		
 		FileInputStream fis;
 		XSSFWorkbook wb=null;
@@ -90,7 +90,7 @@ public class Utils {
 		
 		public static String readDataFromPropFile(String propName) {
 			
-			File propFile = new File(System.getProperty("user.dir")+"\\src\\main\\java\\com\\test\\resources\\config.properties");
+			File propFile = new File(System.getProperty("user.dir")+"\\src\\main\\java\\com\\test\\resources\\testData.properties");
 			Properties prop = new Properties();
 			FileInputStream fis=null;
 			try {

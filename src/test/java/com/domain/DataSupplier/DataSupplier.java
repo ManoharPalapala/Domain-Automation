@@ -1,8 +1,7 @@
-package com.domains.automation;
+package com.domain.DataSupplier;
 
 import org.testng.annotations.DataProvider;
 
-import com.domainAutomation.utils.ExcelUtils;
 import com.domainAutomation.utils.Utils;
 
 public class DataSupplier {
