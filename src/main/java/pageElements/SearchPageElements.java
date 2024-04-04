@@ -1,9 +1,8 @@
-package PageElements;
+package pageElements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 
 public class SearchPageElements extends AbstractComponents{
 
@@ -13,7 +12,7 @@ public class SearchPageElements extends AbstractComponents{
 	
 	private By titleInputFieldLocator = By.xpath("//input[contains(@placeholder,'Title') or contains(@placeholder,'Keyword') or contains(@placeholder,'Company')]");
 	private By locationInputFieldLocator = By.xpath("//input[contains(@placeholder,'Location')]");
-	private By searchButtonLocator = By.xpath("//*[text()='SEARCH' or text()='FIND JOBS' or text()='Search' or text()='Find Jobs' or text()='Browse Jobs' or text()='BROWSE JOBS']");
+	private By searchButtonLocator = By.xpath("//*[text()='SEARCH' or text()='FIND JOBS' or text()='Search' or text()='Find Jobs' or text()='Browse Jobs' or text()='BROWSE JOBS' or @type='submit']");
 	private By applyButtonLocator = By.xpath("//*[text()='APPLY NOW' or text()='Apply Now' or text()='Browse Jobs' or text()='Apply Now ']");
 	private By companyDropdownLocator = By.xpath("//select[@name='company']");
 	private By categoryDropdownLocator = By.xpath("//select[@name='category']");
@@ -26,7 +25,7 @@ public class SearchPageElements extends AbstractComponents{
 	public SearchPageElements(WebDriver driver) {
 		super(driver);
 		this.driver=driver;
-		PageFactory.initElements(driver, this);
+//		PageFactory.initElements(driver, this);
 	}
 	
 	
