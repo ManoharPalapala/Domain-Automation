@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.domains.automation.metaContentValidation">
+      <class name="scripts.SearchPage_T_C">
         <methods>
+          <include name="setUp"/>
+          <include name="verifyApplyButton" invocation-numbers="0"/>
           <include name="tearDown"/>
-          <include name="testSetup"/>
-          <include name="CookiePage" invocation-numbers="0"/>
+          <include name="init"/>
         </methods>
-      </class> <!-- com.domains.automation.metaContentValidation -->
+      </class> <!-- scripts.SearchPage_T_C -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
