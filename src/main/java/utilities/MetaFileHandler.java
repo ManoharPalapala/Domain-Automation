@@ -17,7 +17,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class MetaFileHandler{
 	
-	DataFileHandler dfh = new DataFileHandler();
+	ExcelHandler dfh = new ExcelHandler();
 
 	public String readMetaContentFromExcel(String sheetName, String domainUrl, String page, String typeOfContent) {
 
@@ -27,6 +27,7 @@ public class MetaFileHandler{
 		XSSFWorkbook wb=null;
 		
 		int startIndex=0;
+		@SuppressWarnings("unused")
 		int lastIndex=0;
 		
 		XSSFCell cell=null;
@@ -58,7 +59,7 @@ public class MetaFileHandler{
 				
 				for(int c=0;c<1;c++) {
 					cell=row.getCell(c);
-					if(domainUrl.equals(cell == null ? "Cell is null" : cell.toString().strip()))
+					if(domainUrl.equalsIgnoreCase(cell == null ? "Cell is null" : cell.toString().strip()))
 					startIndex = r+1;
 				}}}
 		

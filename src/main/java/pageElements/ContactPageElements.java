@@ -14,7 +14,7 @@ public class ContactPageElements extends AbstractComponents{
 	private By emailInputLocator = By.xpath("//input[@name='email']");
 	private By phoneInputLocator = By.xpath("//input[@name='phone']");
 	private By messageInputLocator = By.xpath("//textarea[@name='message']");
-	private By submitButtonLocator = By.xpath("//button[@type='submit']");
+	private By submitButtonLocator = By.xpath("//*[@type='submit']");
 	private By nameErrorMessageLocator = By.xpath("//label[@id='name-error']");
 	private By subjectErrorMessageLocator = By.xpath("//label[@id='subject-error']");
 	private By emailErrorMessageLocator = By.xpath("//label[@id='email-error']");

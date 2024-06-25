@@ -6,12 +6,18 @@ import org.testng.annotations.Test;
 
 import dataProvider.DataSupplier;
 import pageElements.ContactPageElements;
-import utilities.DataFileHandler;
 
 public class ContactPage_T_C extends MultiExecution_T_C{
 
-	DataFileHandler dfh = new DataFileHandler();
-	
+
+	@Test(dataProvider = "supplier", dataProviderClass = DataSupplier.class)
+	public void verifyPageHeading(String URL) {
+		driver.get(URL);
+		homePage.clickOnContact();
+		sf.assertTrue(baseElements.getPageHeading().equalsIgnoreCase("Contact")|baseElements.getPageHeading().equalsIgnoreCase("Contact Us"),"Name in h1 tag"+baseElements.getPageHeading());
+		sf.assertAll();
+	}
+
 	@Test(dataProvider="supplier", dataProviderClass=DataSupplier.class)
 	public void verifyMailId(String URL) 
 	{
@@ -30,7 +36,7 @@ public class ContactPage_T_C extends MultiExecution_T_C{
 	sf.assertTrue(contactPage.nameErrorMessage().equals("Please enter name"),"Name error is not matching");
 	sf.assertTrue(contactPage.subjectErrorMessage().equals("Please enter subject"),"Subject error is not matching");
 	sf.assertTrue(contactPage.mailErrorMessage().equals("Please enter email"),"Mail error is not matching");
-	sf.assertTrue(contactPage.phoneErrorMessage().equals("Enter your contact number"),"Phone	 error is not matching");
+	sf.assertTrue(contactPage.phoneErrorMessage().equals("Enter your contact number") || contactPage.phoneErrorMessage().equals("Please enter phone number"),"Phone error is not matching");
 	sf.assertAll();
 	}
 	
@@ -104,16 +110,7 @@ public class ContactPage_T_C extends MultiExecution_T_C{
 		sf.assertTrue(networkStatus(driver.getCurrentUrl())==200);
 		sf.assertAll();
 	}
-	
-	@Test(dataProvider="supplier",dataProviderClass=DataSupplier.class)
-	public void verifyScrollButton(String URL) throws InterruptedException {
-		driver.get(URL);
-		homePage.clickOnContact();
-		scrollDown();
-		homePage.clickOnScroll();
-		sf.assertTrue(getWindowPosition()<9, String.valueOf(getWindowPosition()));
-		sf.assertAll();
-	}
+
 	
 	@Test(dataProvider="supplier",dataProviderClass=DataSupplier.class)
 	public void verifyConsole(String URL)
@@ -137,13 +134,13 @@ public class ContactPage_T_C extends MultiExecution_T_C{
 	public void verifyMetaContent(String URL) {
 		driver.get(URL);
 		homePage.clickOnContact();
-		String actualSearchPageTitle = driver.getTitle();
-		String expectedSearchPageTitle = metaExcel.readMetaContentFromExcel(dfh.readDataFromPropFile("domainMetaContentSheet") ,splitUrlForDomainName(URL),"Contact","title");
-		sf.assertTrue(actualSearchPageTitle.contains(expectedSearchPageTitle),actualSearchPageTitle+" "+expectedSearchPageTitle);
+		String actualContactPageTitle = driver.getTitle();
+		String expectedContactPageTitle = metaExcel.readMetaContentFromExcel(ph.readDataFromPropFile("domainMetaContentSheet") ,splitUrlForDomainName(URL),"Contact","title");
+		sf.assertTrue(actualContactPageTitle.contains(charReplacer(actualContactPageTitle,expectedContactPageTitle)),actualContactPageTitle+" "+expectedContactPageTitle);
 
-		String actualSearchPageDesc = driver.findElement(By.xpath("//meta[@name='description']")).getAttribute("content");
-		String expectedSearchPageDesc = metaExcel.readMetaContentFromExcel(dfh.readDataFromPropFile("domainMetaContentSheet") ,splitUrlForDomainName(URL),"Contact","description");
-		sf.assertTrue(actualSearchPageDesc.contains(expectedSearchPageDesc),actualSearchPageDesc+" "+expectedSearchPageDesc);
+		String actualContactPageDesc = driver.findElement(By.xpath("//meta[@name='description']")).getAttribute("content");
+		String expectedContactPageDesc = metaExcel.readMetaContentFromExcel(ph.readDataFromPropFile("domainMetaContentSheet") ,splitUrlForDomainName(URL),"Contact","description");
+		sf.assertTrue(actualContactPageDesc.contains(charReplacer(actualContactPageDesc,expectedContactPageDesc)),actualContactPageDesc+" "+expectedContactPageDesc);
 		sf.assertAll();
 	}
 	

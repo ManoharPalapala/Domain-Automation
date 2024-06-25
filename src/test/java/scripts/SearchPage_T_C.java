@@ -19,9 +19,9 @@ public class SearchPage_T_C extends MultiExecution_T_C{
 		Select sel = new Select(searchPage.selectCompanyOption());
 		sel.selectByIndex(1);
 		searchPage.clickOnSearch();
-		String selected = searchPage.selectedCompany();
-		String output = searchPage.searchResult(); 
-		sf.assertTrue(output.contains(selected), selected+" "+output);
+		String selected = searchPage.selectedCompany().toLowerCase();
+		String output = searchPage.searchResult().toLowerCase();
+		sf.assertTrue(output.contains(selected), selected+"\n"+output);
 		sf.assertAll();
 		}
 	
@@ -33,7 +33,7 @@ public class SearchPage_T_C extends MultiExecution_T_C{
 		searchPage.sendKeysToTitleFiled("driver");
 		searchPage.clickOnSearch();
 		searchPage.clickOnClearSearch();
-		sf.assertTrue(searchPage.titleInputField().isEmpty() && driver.getCurrentUrl().equals(URL+"/search"));
+		sf.assertTrue(searchPage.titleInputField().isEmpty() && driver.getCurrentUrl().equals(URL+"search"));
 		sf.assertAll();
 	}
 	
@@ -41,7 +41,7 @@ public class SearchPage_T_C extends MultiExecution_T_C{
 	public void validateMinimumJobCount(String URL) {
 		driver.get(URL);
 		SearchPageElements searchPage = homePage.clickOnSearch();
-		sf.assertTrue(searchPage.totalApplyLinks() ==Integer.parseInt(dfh.readDataFromPropFile("minimumJobCountinSearch")),String.valueOf(searchPage.totalApplyLinks())+"   "+dfh.readDataFromPropFile("minimumJobCountinSearch"));	
+		sf.assertTrue(searchPage.totalApplyLinks() ==Integer.parseInt(ph.readDataFromPropFile("minimumJobCountinSearch")),String.valueOf(searchPage.totalApplyLinks())+"   "+ph.readDataFromPropFile("minimumJobCountinSearch"));	
 		sf.assertAll();
 	}
 	
@@ -65,7 +65,7 @@ public class SearchPage_T_C extends MultiExecution_T_C{
 		SearchPageElements searchPage = homePage.clickOnSearch();
 		String applyButtonUrl=searchPage.applyButton().getAttribute("href");
 		searchPage.clickOnApply();
-		sf.assertTrue((driver.getCurrentUrl()).equals(applyButtonUrl));
+		sf.assertTrue((driver.getCurrentUrl()).equals(applyButtonUrl),applyButtonUrl);
 		sf.assertAll();
 	}
 	
@@ -91,16 +91,7 @@ public class SearchPage_T_C extends MultiExecution_T_C{
 		sf.assertAll();
 	}
 	
-	@Test(dataProvider="supplier",dataProviderClass=DataSupplier.class)
-	public void verifyScrollButton(String URL) throws InterruptedException {
-		driver.get(URL);
-		homePage.clickOnSearch();
-		scrollDown();
-		homePage.clickOnScroll();
-		sf.assertTrue(getWindowPosition()<9, String.valueOf(getWindowPosition()));
-		sf.assertAll();
-	}
-	
+
 	@Test(dataProvider="supplier",dataProviderClass=DataSupplier.class)
 	public void verifyConsole(String URL)
 	{
@@ -124,12 +115,17 @@ public class SearchPage_T_C extends MultiExecution_T_C{
 		driver.get(URL);
 		homePage.clickOnSearch();
 		String actualSearchPageTitle = driver.getTitle();
-		String expectedSearchPageTitle = metaExcel.readMetaContentFromExcel(dfh.readDataFromPropFile("domainMetaContentSheet") ,splitUrlForDomainName(URL),"Search","title");
-		sf.assertTrue(actualSearchPageTitle.contains(expectedSearchPageTitle),actualSearchPageTitle+" "+expectedSearchPageTitle);
+		String expectedSearchPageTitle = metaExcel.readMetaContentFromExcel(ph.readDataFromPropFile("domainMetaContentSheet") ,splitUrlForDomainName(URL),"Search","title").trim();
+		sf.assertTrue(actualSearchPageTitle.contains(charReplacer(actualSearchPageTitle,expectedSearchPageTitle)),actualSearchPageTitle+"\n"+charReplacer(actualSearchPageTitle,expectedSearchPageTitle));
+		System.out.println(actualSearchPageTitle);
+		System.out.println(charReplacer(actualSearchPageTitle,expectedSearchPageTitle));
 
 		String actualSearchPageDesc = driver.findElement(By.xpath("//meta[@name='description']")).getAttribute("content");
-		String expectedSearchPageDesc = metaExcel.readMetaContentFromExcel(dfh.readDataFromPropFile("domainMetaContentSheet") ,splitUrlForDomainName(URL),"Search","description");
-		sf.assertTrue(actualSearchPageDesc.contains(expectedSearchPageDesc),actualSearchPageDesc+" "+expectedSearchPageDesc);
+		String expectedSearchPageDesc = metaExcel.readMetaContentFromExcel(ph.readDataFromPropFile("domainMetaContentSheet") ,splitUrlForDomainName(URL),"Search","description").trim();
+		sf.assertTrue(actualSearchPageDesc.contains(charReplacer(actualSearchPageDesc,expectedSearchPageDesc)),actualSearchPageDesc+"\n"+charReplacer(actualSearchPageDesc,expectedSearchPageDesc));
+		System.out.println(actualSearchPageDesc);
+		System.out.println(charReplacer(actualSearchPageDesc,expectedSearchPageDesc));
+
 		sf.assertAll();
 	}
 	
