@@ -16,12 +16,12 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 public class MetaFileHandler{
-	
-	ExcelHandler dfh = new ExcelHandler();
+
+	PropHandler ph = new PropHandler();
 
 	public String readMetaContentFromExcel(String sheetName, String domainUrl, String page, String typeOfContent) {
 
-		File excelFile = new File(dfh.readDataFromPropFile("metaContentSheetPath"));
+		File excelFile = new File(ph.readDataFromPropFile("metaContentSheetPath"));
 		
 		FileInputStream fis;
 		XSSFWorkbook wb=null;
