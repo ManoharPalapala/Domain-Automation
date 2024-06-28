@@ -1,0 +1,1050 @@
+<html>
+<head>
+<title>TestNG:  Domain</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Domain</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>64/17/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri May 03 16:44:03 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>264 seconds (264963 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='scripts.SearchPage_T_C.verifyMetaContent()'><b>verifyMetaContent</b><br>Test class: scripts.SearchPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Your Source for Jobs at All Jobs Hire | All Jobs Hire
+Your Source for Easy at All Jobs Hire expected [true] but found [false],
+	Navigate through an extensive selection of job listings effortlessly on our comprehensive listings page from All Jobs Hire.
+Navigate on an extensive selection comprehensive page platform. effortlessly on our comprehensive an page from All Jobs Hire. that&apos;s right for you. Begin on extensive now! expected [true] but found [false]
+	at scripts.SearchPage_T_C.verifyMetaContent(SearchPage_T_C.java:124)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2004016562", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2004016562'><pre>java.lang.AssertionError: The following asserts failed:
+	Your Source for Jobs at All Jobs Hire | All Jobs Hire
+Your Source for Easy at All Jobs Hire expected [true] but found [false],
+	Navigate through an extensive selection of job listings effortlessly on our comprehensive listings page from All Jobs Hire.
+Navigate on an extensive selection comprehensive page platform. effortlessly on our comprehensive an page from All Jobs Hire. that&apos;s right for you. Begin on extensive now! expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at scripts.SearchPage_T_C.verifyMetaContent(SearchPage_T_C.java:124)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>4</td>
+<td>scripts.SearchPage_T_C@279fedbd</td></tr>
+<tr>
+<td title='scripts.SearchPage_T_C.validateCompanyFilter()'><b>validateCompanyFilter</b><br>Test class: scripts.SearchPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//select[@name=&apos;company&apos;]&quot;}
+  (Session info: chrome=124.0.6367.118)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b2b9d447aab456409be2b0a800d2803a, findElement {value=//select[@name=&apos;company&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.118, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\JOBIAK\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62562}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62562/devtoo..., se:cdpVersion: 124.0.6367.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b2b9d447aab456409be2b0a800d2803a
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at pageElements.AbstractComponents.elementStore(AbstractComponents.java:25)
+	at pageElements.SearchPageElements.clickOnCompanyFilter(SearchPageElements.java:67)
+	at scripts.SearchPage_T_C.validateCompanyFilter(SearchPage_T_C.java:18)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace480847816", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace480847816'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//select[@name=&apos;company&apos;]&quot;}
+  (Session info: chrome=124.0.6367.118)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b2b9d447aab456409be2b0a800d2803a, findElement {value=//select[@name=&apos;company&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.118, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\JOBIAK\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62562}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62562/devtoo..., se:cdpVersion: 124.0.6367.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b2b9d447aab456409be2b0a800d2803a
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at pageElements.AbstractComponents.elementStore(AbstractComponents.java:25)
+	at pageElements.SearchPageElements.clickOnCompanyFilter(SearchPageElements.java:67)
+	at scripts.SearchPage_T_C.validateCompanyFilter(SearchPage_T_C.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>14</td>
+<td>scripts.SearchPage_T_C@279fedbd</td></tr>
+<tr>
+<td title='scripts.TermsPage_T_C.verifyHttpInPageSource()'><b>verifyHttpInPageSource</b><br>Test class: scripts.TermsPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true]
+	at scripts.TermsPage_T_C.verifyHttpInPageSource(TermsPage_T_C.java:89)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1265558124", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1265558124'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at scripts.TermsPage_T_C.verifyHttpInPageSource(TermsPage_T_C.java:89)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>4</td>
+<td>scripts.TermsPage_T_C@45c7e403</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyRobotsBeforeSubmission()'><b>verifyRobotsBeforeSubmission</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at scripts.HomePage_T_C.verifyRobotsBeforeSubmission(HomePage_T_C.java:17)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace270338398", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace270338398'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at scripts.HomePage_T_C.verifyRobotsBeforeSubmission(HomePage_T_C.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>1</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.SearchPage_T_C.verifyHttpInPageSource()'><b>verifyHttpInPageSource</b><br>Test class: scripts.SearchPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true]
+	at scripts.SearchPage_T_C.verifyHttpInPageSource(SearchPage_T_C.java:133)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1088648198", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1088648198'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at scripts.SearchPage_T_C.verifyHttpInPageSource(SearchPage_T_C.java:133)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>5</td>
+<td>scripts.SearchPage_T_C@279fedbd</td></tr>
+<tr>
+<td title='scripts.PrivacyPage_T_C.verifyMetaContent()'><b>verifyMetaContent</b><br>Test class: scripts.PrivacyPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Trust and Transparency - Explore Job Board Privacy Policy | All Jobs Hire Understand Our Privacy Policy for Using Our Website expected [true] but found [false],
+	Trust and transparency are core values of our platform. Discover our detailed Privacy Policy outlining our data practices and protection measures. Explore our privacy policy to understand how we safeguard your personal information. We take your privacy seriously. Learn how we protect your data. expected [true] but found [false]
+	at scripts.PrivacyPage_T_C.verifyMetaContent(PrivacyPage_T_C.java:79)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace637000477", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace637000477'><pre>java.lang.AssertionError: The following asserts failed:
+	Trust and Transparency - Explore Job Board Privacy Policy | All Jobs Hire Understand Our Privacy Policy for Using Our Website expected [true] but found [false],
+	Trust and transparency are core values of our platform. Discover our detailed Privacy Policy outlining our data practices and protection measures. Explore our privacy policy to understand how we safeguard your personal information. We take your privacy seriously. Learn how we protect your data. expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at scripts.PrivacyPage_T_C.verifyMetaContent(PrivacyPage_T_C.java:79)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>3</td>
+<td>scripts.PrivacyPage_T_C@2925bf5b</td></tr>
+<tr>
+<td title='scripts.ContactPage_T_C.verifyHttpInPageSource()'><b>verifyHttpInPageSource</b><br>Test class: scripts.ContactPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true]
+	at scripts.ContactPage_T_C.verifyHttpInPageSource(ContactPage_T_C.java:147)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace88550249", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace88550249'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at scripts.ContactPage_T_C.verifyHttpInPageSource(ContactPage_T_C.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>4</td>
+<td>scripts.ContactPage_T_C@b3ca52e</td></tr>
+<tr>
+<td title='scripts.SearchPage_T_C.verifyApplyButton()'><b>verifyApplyButton</b><br>Test class: scripts.SearchPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()=&apos;APPLY NOW&apos; or text()=&apos;Apply Now&apos;or text()=&apos;Apply Now &apos; or text()=&apos;View Job Details&apos;]&quot;}
+  (Session info: chrome=124.0.6367.118)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [91d5a1a577e85fe20bbb838236b8f556, findElement {value=//*[text()=&apos;APPLY NOW&apos; or text()=&apos;Apply Now&apos;or text()=&apos;Apply Now &apos; or text()=&apos;View Job Details&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.118, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\JOBIAK\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62843}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62843/devtoo..., se:cdpVersion: 124.0.6367.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 91d5a1a577e85fe20bbb838236b8f556
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at pageElements.AbstractComponents.elementStore(AbstractComponents.java:25)
+	at pageElements.SearchPageElements.applyButton(SearchPageElements.java:63)
+	at scripts.SearchPage_T_C.verifyApplyButton(SearchPage_T_C.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace545008562", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace545008562'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()=&apos;APPLY NOW&apos; or text()=&apos;Apply Now&apos;or text()=&apos;Apply Now &apos; or text()=&apos;View Job Details&apos;]&quot;}
+  (Session info: chrome=124.0.6367.118)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [91d5a1a577e85fe20bbb838236b8f556, findElement {value=//*[text()=&apos;APPLY NOW&apos; or text()=&apos;Apply Now&apos;or text()=&apos;Apply Now &apos; or text()=&apos;View Job Details&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.118, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\JOBIAK\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62843}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62843/devtoo..., se:cdpVersion: 124.0.6367.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 91d5a1a577e85fe20bbb838236b8f556
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at pageElements.AbstractComponents.elementStore(AbstractComponents.java:25)
+	at pageElements.SearchPageElements.applyButton(SearchPageElements.java:63)
+	at scripts.SearchPage_T_C.verifyApplyButton(SearchPage_T_C.java:66)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>14</td>
+<td>scripts.SearchPage_T_C@279fedbd</td></tr>
+<tr>
+<td title='scripts.SearchPage_T_C.validateMinimumJobCount()'><b>validateMinimumJobCount</b><br>Test class: scripts.SearchPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	0   30 expected [true] but found [false]
+	at scripts.SearchPage_T_C.validateMinimumJobCount(SearchPage_T_C.java:45)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1588707870", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1588707870'><pre>java.lang.AssertionError: The following asserts failed:
+	0   30 expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at scripts.SearchPage_T_C.validateMinimumJobCount(SearchPage_T_C.java:45)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>22</td>
+<td>scripts.SearchPage_T_C@279fedbd</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyHttpInPageSource()'><b>verifyHttpInPageSource</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true]
+	at scripts.HomePage_T_C.verifyHttpInPageSource(HomePage_T_C.java:89)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1922375716", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1922375716'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at scripts.HomePage_T_C.verifyHttpInPageSource(HomePage_T_C.java:89)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>2</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.PrivacyPage_T_C.verifyHttpInPageSource()'><b>verifyHttpInPageSource</b><br>Test class: scripts.PrivacyPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true]
+	at scripts.PrivacyPage_T_C.verifyHttpInPageSource(PrivacyPage_T_C.java:87)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace848133471", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace848133471'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at scripts.PrivacyPage_T_C.verifyHttpInPageSource(PrivacyPage_T_C.java:87)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>4</td>
+<td>scripts.PrivacyPage_T_C@2925bf5b</td></tr>
+<tr>
+<td title='scripts.SearchPage_T_C.verifyClearButton()'><b>verifyClearButton</b><br>Test class: scripts.SearchPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[contains(@placeholder,&apos;Title&apos;) or contains(@placeholder,&apos;Keyword&apos;) or contains(@placeholder,&apos;Company&apos;)]&quot;}
+  (Session info: chrome=124.0.6367.118)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2da1791ea635af4865ec460a2cfae626, findElement {value=//input[contains(@placeholder,&apos;Title&apos;) or contains(@placeholder,&apos;Keyword&apos;) or contains(@placeholder,&apos;Company&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.118, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\JOBIAK\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62975}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62975/devtoo..., se:cdpVersion: 124.0.6367.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2da1791ea635af4865ec460a2cfae626
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at pageElements.AbstractComponents.elementStore(AbstractComponents.java:25)
+	at pageElements.SearchPageElements.sendKeysToTitleFiled(SearchPageElements.java:43)
+	at scripts.SearchPage_T_C.verifyClearButton(SearchPage_T_C.java:33)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1181699737", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1181699737'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[contains(@placeholder,&apos;Title&apos;) or contains(@placeholder,&apos;Keyword&apos;) or contains(@placeholder,&apos;Company&apos;)]&quot;}
+  (Session info: chrome=124.0.6367.118)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2da1791ea635af4865ec460a2cfae626, findElement {value=//input[contains(@placeholder,&apos;Title&apos;) or contains(@placeholder,&apos;Keyword&apos;) or contains(@placeholder,&apos;Company&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.118, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\JOBIAK\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62975}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62975/devtoo..., se:cdpVersion: 124.0.6367.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2da1791ea635af4865ec460a2cfae626
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at pageElements.AbstractComponents.elementStore(AbstractComponents.java:25)
+	at pageElements.SearchPageElements.sendKeysToTitleFiled(SearchPageElements.java:43)
+	at scripts.SearchPage_T_C.verifyClearButton(SearchPage_T_C.java:33)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>14</td>
+<td>scripts.SearchPage_T_C@279fedbd</td></tr>
+<tr>
+<td title='scripts.CookiePage_T_C.verifyMetaContent()'><b>verifyMetaContent</b><br>Test class: scripts.CookiePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	We use cookies to improve user experience and optimize our services. Explore our Cookie Policy to understand how we leverage cookies on our platform. Explore our cookie policy to understand how we use cookies for functionality and analytics. Learn how we protect your data and respect your privacy. expected [true] but found [false]
+	at scripts.CookiePage_T_C.verifyMetaContent(CookiePage_T_C.java:79)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2056136887", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2056136887'><pre>java.lang.AssertionError: The following asserts failed:
+	We use cookies to improve user experience and optimize our services. Explore our Cookie Policy to understand how we leverage cookies on our platform. Explore our cookie policy to understand how we use cookies for functionality and analytics. Learn how we protect your data and respect your privacy. expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at scripts.CookiePage_T_C.verifyMetaContent(CookiePage_T_C.java:79)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>4</td>
+<td>scripts.CookiePage_T_C@710f4dc7</td></tr>
+<tr>
+<td title='scripts.TermsPage_T_C.verifyMetaContent()'><b>verifyMetaContent</b><br>Test class: scripts.TermsPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Your access to and use of our services are governed by our Terms of Use. Review our policies and obligations to ensure compliance. Yto access terms Review use of to services are governed by obligations to of Use. Review Terms policies and obligations to ensure expected [true] but found [false]
+	at scripts.TermsPage_T_C.verifyMetaContent(TermsPage_T_C.java:81)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2098263915", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2098263915'><pre>java.lang.AssertionError: The following asserts failed:
+	Your access to and use of our services are governed by our Terms of Use. Review our policies and obligations to ensure compliance. Yto access terms Review use of to services are governed by obligations to of Use. Review Terms policies and obligations to ensure expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at scripts.TermsPage_T_C.verifyMetaContent(TermsPage_T_C.java:81)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>5</td>
+<td>scripts.TermsPage_T_C@45c7e403</td></tr>
+<tr>
+<td title='scripts.CookiePage_T_C.verifyHttpInPageSource()'><b>verifyHttpInPageSource</b><br>Test class: scripts.CookiePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true]
+	at scripts.CookiePage_T_C.verifyHttpInPageSource(CookiePage_T_C.java:87)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1023730808", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1023730808'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [false] but found [true]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at scripts.CookiePage_T_C.verifyHttpInPageSource(CookiePage_T_C.java:87)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>3</td>
+<td>scripts.CookiePage_T_C@710f4dc7</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyOgImageNetwork()'><b>verifyOgImageNetwork</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at scripts.HomePage_T_C.verifyOgImageNetwork(HomePage_T_C.java:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace727816156", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace727816156'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at scripts.HomePage_T_C.verifyOgImageNetwork(HomePage_T_C.java:139)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>2</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.ContactPage_T_C.verifyMetaContent()'><b>verifyMetaContent</b><br>Test class: scripts.ContactPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Get in touch with our friendly customer service representatives for assistance with your job search journey or any other inquiries on our Contact Us page. Get in touch with us for job search support, feedback, or inquiries. Our team is here to assist you with any questions. Contact us and we&apos;ll be happy to help. expected [true] but found [false]
+	at scripts.ContactPage_T_C.verifyMetaContent(ContactPage_T_C.java:138)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1525543571", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1525543571'><pre>java.lang.AssertionError: The following asserts failed:
+	Get in touch with our friendly customer service representatives for assistance with your job search journey or any other inquiries on our Contact Us page. Get in touch with us for job search support, feedback, or inquiries. Our team is here to assist you with any questions. Contact us and we&apos;ll be happy to help. expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at scripts.ContactPage_T_C.verifyMetaContent(ContactPage_T_C.java:138)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>7</td>
+<td>scripts.ContactPage_T_C@b3ca52e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='scripts.TermsPage_T_C.verifyNetworkStatus()'><b>verifyNetworkStatus</b><br>Test class: scripts.TermsPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.TermsPage_T_C@45c7e403</td></tr>
+<tr>
+<td title='scripts.PrivacyPage_T_C.verifyProtocol()'><b>verifyProtocol</b><br>Test class: scripts.PrivacyPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>6</td>
+<td>scripts.PrivacyPage_T_C@2925bf5b</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyFaviconNetwork()'><b>verifyFaviconNetwork</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>2</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyTitleRepetition()'><b>verifyTitleRepetition</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>2</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.PrivacyPage_T_C.verifyConsole()'><b>verifyConsole</b><br>Test class: scripts.PrivacyPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>5</td>
+<td>scripts.PrivacyPage_T_C@2925bf5b</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyImageFormat()'><b>verifyImageFormat</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>3</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.PrivacyPage_T_C.verifySubdomain()'><b>verifySubdomain</b><br>Test class: scripts.PrivacyPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>6</td>
+<td>scripts.PrivacyPage_T_C@2925bf5b</td></tr>
+<tr>
+<td title='scripts.ContactPage_T_C.clientSideValidation()'><b>clientSideValidation</b><br>Test class: scripts.ContactPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>7</td>
+<td>scripts.ContactPage_T_C@b3ca52e</td></tr>
+<tr>
+<td title='scripts.PrivacyPage_T_C.verifyTitleRepetition()'><b>verifyTitleRepetition</b><br>Test class: scripts.PrivacyPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>6</td>
+<td>scripts.PrivacyPage_T_C@2925bf5b</td></tr>
+<tr>
+<td title='scripts.TermsPage_T_C.verifyPageHeading()'><b>verifyPageHeading</b><br>Test class: scripts.TermsPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>6</td>
+<td>scripts.TermsPage_T_C@45c7e403</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyFolderNameInPath()'><b>verifyFolderNameInPath</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>3</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyConsole()'><b>verifyConsole</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>1</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.SearchPage_T_C.verifySubdomain()'><b>verifySubdomain</b><br>Test class: scripts.SearchPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.SearchPage_T_C@279fedbd</td></tr>
+<tr>
+<td title='scripts.PrivacyPage_T_C.verifyOgUrlRepetition()'><b>verifyOgUrlRepetition</b><br>Test class: scripts.PrivacyPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>5</td>
+<td>scripts.PrivacyPage_T_C@2925bf5b</td></tr>
+<tr>
+<td title='scripts.ContactPage_T_C.verifyNetworkStatus()'><b>verifyNetworkStatus</b><br>Test class: scripts.ContactPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>8</td>
+<td>scripts.ContactPage_T_C@b3ca52e</td></tr>
+<tr>
+<td title='scripts.TermsPage_T_C.verifyTitleRepetition()'><b>verifyTitleRepetition</b><br>Test class: scripts.TermsPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>3</td>
+<td>scripts.TermsPage_T_C@45c7e403</td></tr>
+<tr>
+<td title='scripts.CookiePage_T_C.verifySubdomain()'><b>verifySubdomain</b><br>Test class: scripts.CookiePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.CookiePage_T_C@710f4dc7</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyOgSiteName()'><b>verifyOgSiteName</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>2</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyDomainViewPort()'><b>verifyDomainViewPort</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>3</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.CookiePage_T_C.verifyNetworkStatus()'><b>verifyNetworkStatus</b><br>Test class: scripts.CookiePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>3</td>
+<td>scripts.CookiePage_T_C@710f4dc7</td></tr>
+<tr>
+<td title='scripts.TermsPage_T_C.verifySubdomain()'><b>verifySubdomain</b><br>Test class: scripts.TermsPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.TermsPage_T_C@45c7e403</td></tr>
+<tr>
+<td title='scripts.SearchPage_T_C.verifyDescRepetition()'><b>verifyDescRepetition</b><br>Test class: scripts.SearchPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.SearchPage_T_C@279fedbd</td></tr>
+<tr>
+<td title='scripts.ContactPage_T_C.verifyTitleRepetition()'><b>verifyTitleRepetition</b><br>Test class: scripts.ContactPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.ContactPage_T_C@b3ca52e</td></tr>
+<tr>
+<td title='scripts.TermsPage_T_C.verifyConsole()'><b>verifyConsole</b><br>Test class: scripts.TermsPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>5</td>
+<td>scripts.TermsPage_T_C@45c7e403</td></tr>
+<tr>
+<td title='scripts.ContactPage_T_C.verifyConsole()'><b>verifyConsole</b><br>Test class: scripts.ContactPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.ContactPage_T_C@b3ca52e</td></tr>
+<tr>
+<td title='scripts.SearchPage_T_C.verifyOgUrlRepetition()'><b>verifyOgUrlRepetition</b><br>Test class: scripts.SearchPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>3</td>
+<td>scripts.SearchPage_T_C@279fedbd</td></tr>
+<tr>
+<td title='scripts.PrivacyPage_T_C.verifyPageHeading()'><b>verifyPageHeading</b><br>Test class: scripts.PrivacyPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.PrivacyPage_T_C@2925bf5b</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifySitemap()'><b>verifySitemap</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>0</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyScrollButton()'><b>verifyScrollButton</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>5</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.ContactPage_T_C.verifySubdomain()'><b>verifySubdomain</b><br>Test class: scripts.ContactPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>5</td>
+<td>scripts.ContactPage_T_C@b3ca52e</td></tr>
+<tr>
+<td title='scripts.ContactPage_T_C.validateErrorMessages()'><b>validateErrorMessages</b><br>Test class: scripts.ContactPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>6</td>
+<td>scripts.ContactPage_T_C@b3ca52e</td></tr>
+<tr>
+<td title='scripts.ContactPage_T_C.serverSideValidationWithValidDetails()'><b>serverSideValidationWithValidDetails</b><br>Test class: scripts.ContactPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>7</td>
+<td>scripts.ContactPage_T_C@b3ca52e</td></tr>
+<tr>
+<td title='scripts.TermsPage_T_C.verifyStaticContent()'><b>verifyStaticContent</b><br>Test class: scripts.TermsPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>6</td>
+<td>scripts.TermsPage_T_C@45c7e403</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyDescRepetition()'><b>verifyDescRepetition</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>2</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.PrivacyPage_T_C.verifyDescRepetition()'><b>verifyDescRepetition</b><br>Test class: scripts.PrivacyPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.PrivacyPage_T_C@2925bf5b</td></tr>
+<tr>
+<td title='scripts.PrivacyPage_T_C.verifyNetworkStatus()'><b>verifyNetworkStatus</b><br>Test class: scripts.PrivacyPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.PrivacyPage_T_C@2925bf5b</td></tr>
+<tr>
+<td title='scripts.SearchPage_T_C.verifyConsole()'><b>verifyConsole</b><br>Test class: scripts.SearchPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>6</td>
+<td>scripts.SearchPage_T_C@279fedbd</td></tr>
+<tr>
+<td title='scripts.ContactPage_T_C.verifyOgUrlRepetition()'><b>verifyOgUrlRepetition</b><br>Test class: scripts.ContactPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>5</td>
+<td>scripts.ContactPage_T_C@b3ca52e</td></tr>
+<tr>
+<td title='scripts.TermsPage_T_C.verifyOgUrlRepetition()'><b>verifyOgUrlRepetition</b><br>Test class: scripts.TermsPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>5</td>
+<td>scripts.TermsPage_T_C@45c7e403</td></tr>
+<tr>
+<td title='scripts.PrivacyPage_T_C.verifyStaticContent()'><b>verifyStaticContent</b><br>Test class: scripts.PrivacyPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>5</td>
+<td>scripts.PrivacyPage_T_C@2925bf5b</td></tr>
+<tr>
+<td title='scripts.SearchPage_T_C.verifyProtocol()'><b>verifyProtocol</b><br>Test class: scripts.SearchPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.SearchPage_T_C@279fedbd</td></tr>
+<tr>
+<td title='scripts.TermsPage_T_C.verifyProtocol()'><b>verifyProtocol</b><br>Test class: scripts.TermsPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.TermsPage_T_C@45c7e403</td></tr>
+<tr>
+<td title='scripts.ContactPage_T_C.verifyDescRepetition()'><b>verifyDescRepetition</b><br>Test class: scripts.ContactPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.ContactPage_T_C@b3ca52e</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyDomainPipeline()'><b>verifyDomainPipeline</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>2</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.CookiePage_T_C.verifyDescRepetition()'><b>verifyDescRepetition</b><br>Test class: scripts.CookiePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.CookiePage_T_C@710f4dc7</td></tr>
+<tr>
+<td title='scripts.CookiePage_T_C.verifyOgUrlRepetition()'><b>verifyOgUrlRepetition</b><br>Test class: scripts.CookiePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.CookiePage_T_C@710f4dc7</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyMetaContent()'><b>verifyMetaContent</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>2</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.ContactPage_T_C.serverSideValidationWithInvalidDetails()'><b>serverSideValidationWithInvalidDetails</b><br>Test class: scripts.ContactPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>6</td>
+<td>scripts.ContactPage_T_C@b3ca52e</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyProtocol()'><b>verifyProtocol</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>2</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.CookiePage_T_C.verifyProtocol()'><b>verifyProtocol</b><br>Test class: scripts.CookiePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.CookiePage_T_C@710f4dc7</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyNetworkStatus()'><b>verifyNetworkStatus</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>3</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.SearchPage_T_C.verifyTitleRepetition()'><b>verifyTitleRepetition</b><br>Test class: scripts.SearchPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>3</td>
+<td>scripts.SearchPage_T_C@279fedbd</td></tr>
+<tr>
+<td title='scripts.CookiePage_T_C.verifyStaticContent()'><b>verifyStaticContent</b><br>Test class: scripts.CookiePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.CookiePage_T_C@710f4dc7</td></tr>
+<tr>
+<td title='scripts.ContactPage_T_C.verifyProtocol()'><b>verifyProtocol</b><br>Test class: scripts.ContactPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>3</td>
+<td>scripts.ContactPage_T_C@b3ca52e</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyOgImageRepetition()'><b>verifyOgImageRepetition</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>3</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.CookiePage_T_C.verifyConsole()'><b>verifyConsole</b><br>Test class: scripts.CookiePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>5</td>
+<td>scripts.CookiePage_T_C@710f4dc7</td></tr>
+<tr>
+<td title='scripts.SearchPage_T_C.verifyNetworkStatus()'><b>verifyNetworkStatus</b><br>Test class: scripts.SearchPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.SearchPage_T_C@279fedbd</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyOgUrlRepetition()'><b>verifyOgUrlRepetition</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>2</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifyStyleSheets()'><b>verifyStyleSheets</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.ContactPage_T_C.verifyMailId()'><b>verifyMailId</b><br>Test class: scripts.ContactPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>4</td>
+<td>scripts.ContactPage_T_C@b3ca52e</td></tr>
+<tr>
+<td title='scripts.CookiePage_T_C.verifyPageHeading()'><b>verifyPageHeading</b><br>Test class: scripts.CookiePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>5</td>
+<td>scripts.CookiePage_T_C@710f4dc7</td></tr>
+<tr>
+<td title='scripts.HomePage_T_C.verifySubdomain()'><b>verifySubdomain</b><br>Test class: scripts.HomePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>3</td>
+<td>scripts.HomePage_T_C@7dcf94f8</td></tr>
+<tr>
+<td title='scripts.TermsPage_T_C.verifyDescRepetition()'><b>verifyDescRepetition</b><br>Test class: scripts.TermsPage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>5</td>
+<td>scripts.TermsPage_T_C@45c7e403</td></tr>
+<tr>
+<td title='scripts.CookiePage_T_C.verifyTitleRepetition()'><b>verifyTitleRepetition</b><br>Test class: scripts.CookiePage_T_C<br>Parameters: https://alljobshire.com</td>
+<td></td>
+<td>5</td>
+<td>scripts.CookiePage_T_C@710f4dc7</td></tr>
+</table><p>
+</body>
+</html>
