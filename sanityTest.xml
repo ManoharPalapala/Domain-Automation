@@ -5,8 +5,8 @@
         <listener class-name="testBase.Listeners"/>
     </listeners>
     <parameter name="browserName" value="chrome"></parameter>
-<!--    <test thread-count="5" parallel="classes" name="final check">-->
-    <test name="SmokeTest">
+    <test thread-count="3" parallel="classes" name="final check">
+<!--    <test name="SmokeTest">-->
         <classes>
             <class name="scripts.HomePage_T_C" />
             <class name="scripts.SearchPage_T_C"/>

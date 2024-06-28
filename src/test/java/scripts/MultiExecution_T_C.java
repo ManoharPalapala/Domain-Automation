@@ -93,7 +93,7 @@ public class MultiExecution_T_C extends Base {
 	}
 
 	public int getWindowPosition() {
-		WebElement header = driver.findElement(By.tagName("nav"));
+		WebElement header = driver.findElement(By.tagName("header"));
 		return header.getRect().y;
 	}
 

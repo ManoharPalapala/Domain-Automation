@@ -40,7 +40,6 @@ public class BaseElements extends AbstractComponents {
 
 
 
-
 	public String getMetaTitle() {
 		return elementStore(metaTitleTag).getAttribute("content");
 	}

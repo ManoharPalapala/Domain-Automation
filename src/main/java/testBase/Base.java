@@ -30,16 +30,16 @@ public class Base {
 
 
 
-	@BeforeTest
-	public void testSetUp(){
-		ph = new PropHandler();
-
-		for(Object[] x:dfh.readDataFromExcel("list")) {
-			for(Object y:x){
-				System.out.println(y);
-			}
-		}
-	}
+//	@BeforeTest
+//	public void testSetUp(){
+//		ph = new PropHandler();
+//
+//		for(Object[] x:dfh.readDataFromExcel("list")) {
+//			for(Object y:x){
+//				System.out.println(y);
+//			}
+//		}
+//	}
 
 
 	@Parameters
@@ -55,6 +55,7 @@ public class Base {
 		baseElements = new BaseElements(driver);
 		landingPage = new LandingPageElements(driver);
 		dfh = new ExcelHandler();
+		ph = new PropHandler();
 		sf = new SoftAssert();
 	}
 

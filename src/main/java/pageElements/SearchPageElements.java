@@ -17,7 +17,6 @@ public class SearchPageElements extends AbstractComponents {
 			.xpath("//*[text()='APPLY NOW' or text()='Apply Now'or text()='Apply Now ' or text()='View Job Details']");
 	private final By companyDropdownLocator = By.xpath("//select[@name='company']");
 	private final By totalCompanies = By.xpath("//select[@name='company']/child::option");
-	private final By firstCompanyName = By.xpath("//select[@name='company']/option[2]");
 	private final By categoryDropdownLocator = By.xpath("//select[@name='category']");
 //	private By jobtypeDropdownLocator = By.xpath("//select[@name='jtype']");
 	private final By selectedCompanyDropdownLocator = By.xpath("//select[@name='company']/child::option[@selected]");
@@ -72,10 +71,6 @@ public class SearchPageElements extends AbstractComponents {
 
 	public int getCompaniesCount(){
 		return elementsStore(totalCompanies).size();
-	}
-
-	public String getFirstCompanyName(){
-		return elementStore(firstCompanyName).getText();
 	}
 
 	public void clickOnCategoryFilter() {

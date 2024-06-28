@@ -33,7 +33,7 @@ public class BrowserFactory {
 			chromeOptions.addArguments("--disable-popup-blocking");
 			chromeOptions.addArguments("--start-maximized");
 			chromeOptions.merge(desCap);
-			WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().clearDriverCache().setup();
 			driver = new ChromeDriver(chromeOptions);
 
 		} else if (browserName.equalsIgnoreCase("edge")) {

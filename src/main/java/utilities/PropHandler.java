@@ -6,6 +6,11 @@ import java.util.Properties;
 
 public class PropHandler {
 
+    public static void main(String[] args){
+        PropHandler ph = new PropHandler();
+        System.out.println(ph.readDataFromPropFile("robots.txt"));
+    }
+
     public String readDataFromPropFile(String propName) {
 
         File propFile = new File(

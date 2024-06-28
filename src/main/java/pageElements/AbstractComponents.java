@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class AbstractComponents {
 
 	protected WebDriver driver;
-//	protected DataFileHandler dfh = new DataFileHandler();
+	protected WebDriverWait wait;
 
 	public AbstractComponents(WebDriver driver) {
 		this.driver = driver;
@@ -29,7 +29,7 @@ public class AbstractComponents {
 
 	public WebElement elementStore(By elem) {
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+			wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 			return wait.until(ExpectedConditions.presenceOfElementLocated(elem));
 		} catch (Exception e) {
 			throw new org.openqa.selenium.NoSuchElementException("Element not found " + elem, e);
@@ -38,7 +38,7 @@ public class AbstractComponents {
 
 	public List<WebElement> elementsStore(By elems){
 		try{
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+			wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 			return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(elems));
 		} catch (Exception e) {
 			throw new org.openqa.selenium.NoSuchElementException("Elements not found " + elems, e);
@@ -46,12 +46,15 @@ public class AbstractComponents {
 	}
 
 	public void clickElement(WebElement elem) {
-		try {
-			elem.click();
-		} catch (Exception e) {
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].click();", elem);
-		}
+			try {
+				elem.click();
+			} catch (Exception e) {
+				wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+				wait.until(ExpectedConditions.elementToBeClickable(elem));
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", elem);
+			}
+
 	}
 
 	public WebElement waitUsingElement(By elem) {

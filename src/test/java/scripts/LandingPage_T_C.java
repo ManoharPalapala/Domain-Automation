@@ -276,7 +276,7 @@ public class LandingPage_T_C extends MultiExecution_T_C{
 		int domlogoHeight = baseElements.getNavDimensions()[2];
 		int scrollHeightDom = baseElements.getScrollDimensions()[0];
 		int scrollWidthDom = baseElements.getScrollDimensions()[1];
-		sf.assertTrue(lanNavwidth==domNavwidth && lanNavHeight==domNavHeight && lanlogoWidth==domlogoWidth && lanlogoHeight==domlogoHeight);
+		sf.assertTrue(lanNavwidth==domNavwidth && lanNavHeight==domNavHeight && lanlogoWidth==domlogoWidth && lanlogoHeight==domlogoHeight,"Lan h "+lanNavHeight+"\nlan w "+lanNavwidth+"\ndom h "+domNavHeight+"\ndom w "+domNavwidth);
 		sf.assertTrue(scrollHeightLan==scrollHeightDom && scrollWidthLan==scrollWidthDom,"lan h: "+scrollHeightLan+"lan w: "+scrollWidthLan+"dom h: "+scrollHeightDom+"dom w: "+scrollWidthDom);
 		sf.assertAll();
 	}

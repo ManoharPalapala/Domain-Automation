@@ -14,7 +14,7 @@ public class HomePageElements extends AbstractComponents {
 	private By search = By.xpath("//button[@type='submit'] | //a[@href='/search' and @rel='nofollow']");
 	private By about = By.xpath("//a[contains(text(),'About') or text()='ABOUT' or text()='ABOUT US' or text()='About Us']");
 	private By jobsByCompanyPage = By.xpath(
-			"//a[contains(text(),'BROWSE ALL') or contains(text(),'View All') or contains(text(),'VIEW ALL') or text()='View Employers' or contains(text(),'Browse All') or contains(text(),'COMPANIES') or contains(text(),'Companies') or text()='Locations' or contains(text(),'View More') or contains(text(),'VIEW MORE') and not(contains(@rel,'nofollow'))]");
+			"//a[contains(text(),'BROWSE ALL') or contains(text(),'View All') or contains(text(),'VIEW ALL') or text()='View Employers' or contains(text(),'Browse All') or contains(text(),'COMPANIES') or contains(text(),'Companies') or text()='Locations' or contains(text(),'View More') or contains(text(),'VIEW MORE') or contains(text(),'companies') and not(contains(@rel,'nofollow'))]");
 	private By termsPage = By.xpath(
 			"//a[text()='Terms of Service' or text()='TERMS OF SERVICE' or text()='terms of service' or text()='Terms Of Service' or text()='Terms of Use' or text()='Terms & Conditions' or text()='Terms And Conditions' or text()='Terms and Conditions']");
 	private By privacyPolicyPage = By.xpath(
